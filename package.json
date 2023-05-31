@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "sass": "^1.62.1",
+    "vite": "^4.3.9"
+  },
+  "name": "adminua",
+  "description": "Le dashboard de Dizalty Campus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edwin Barnabot",
+  "license": "ISC"
+}

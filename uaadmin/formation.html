@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="fr">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../asssets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <!-- fin favicon -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/libs/scss/style.scss">
+    <title>Formation | DIZALTY CAMPUS</title>
+</head>
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="index.html">UA ADMIN</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Rechercher">
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">Nom Prénom</h5>
+                                    <span class="status"></span><span class="ml-2">Disponible</span>
+                                </div>
+                                <a class="dropdown-item" href="user-profile.html"><i class="fas fa-user mr-2"></i>Profil</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Paramètres</a>
+                                <a id="logout" class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Déconnexion</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Tableau de bord</a>
+
+                    <!-- Burger icon -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Fin Burger icon -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+
+                            <!-- Début menu administrateur -->
+                            <li class="nav-item" id="admin">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="" data-target="#submenu-administrateur" aria-controls="submenu-administrateur"><i class="fa fa-fw fa-user-circle"></i>Administrateur</a>
+                                <div id="submenu-administrateur" class="collapse submenu show">
+                                    <ul class="nav flex-column">
+
+                                        <!-- Début gestion formation -->
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="true" data-target="#submenu-modif-formation" aria-controls="submenu-modif-formation"><i class="fa fa-fw fa-wrench pb-1"></i>Gestion formations</a>
+                                            <div id="submenu-modif-formation" class="collapse submenu show" >
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="list-formations.html"><i class="fa fa-plus text-light pb-1"></i>Liste des formations</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="edit-formation.html"><i class="fa fa-fw fa-plus text-light pb-1"></i>Ajouter une formation</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="delete-formation.html"><i class="fa fa-fw fa-minus text-light pb-1"></i>Supprimer une formation</a>
+                                                    </li>
+                                                    <li>  
+                                                        <a class="nav-link" href="edit-formation.html"><i class="fa fa-fw fa-minus text-light pb-1"></i>Modifier une formation</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="assign.html"><i class="fa fa-fw fa-arrow-right text-light pb-1"></i>Affectation</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-modif-formation2">Gestion matières</a>
+                                                        <div id="submenu-modif-formation2" class="collapse submenu">
+                                                            <ul class="nav flex-column">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="list-subjects.html"><i class="fa fa-fw fa-list text-light pb-1"></i>Liste des matière</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="list-subjects.html"><i class="fa fa-fw fa-plus text-light pb-1"></i>Ajouter une matière</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="list-subjects.html"><i class="fa fa-fw fa-minus text-light pb-1"></i>Supprimer une matière</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="modify-subject.html"><i class="fa fa-fw fa-edit text-light pb-1"></i>Modifier une matière</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" href="assign.html"><i class="fa fa-fw fa-arrow-right text-light pb-1"></i>Affectation</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <!-- Fin gestion formations -->
+                                        
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="general.html"><i class="fa fa-fw fa-circle-info pb-1"></i>Dev Help</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- fin menu administrateur -->
+                            
+                            <!-- Début séparateur -->
+                            <li class="nav-divider">
+                                Fonctionnalités
+                            </li>
+                            <!-- Fin séparateur -->
+
+                            <!-- Début formations -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-graduation-cap"></i>Formations</a>
+                                <div id="submenu-10" class="collapse submenu" >
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11">Informatique</a>
+                                            <div id="submenu-11" class="collapse submenu" >
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Formation 1</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Formation 2</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-communication" aria-controls="submenu-communication">Communication</a>
+                                            <div id="submenu-communication" class="collapse submenu" >
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Formation 1</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Formation 2</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- Fin formations -->
+
+                            <!-- Début messagerie -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="inbox.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-messagerie" aria-controls="submenu-messagerie"><i class="fa-solid fa-message"></i>Messagerie</a>
+                                <div id="submenu-messagerie" class="collapse submenu" >
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="inbox.html">Boîte de réception</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-messagerie-2" aria-controls="submenu-messagerie-2">Rédiger un message</a>
+                                            <div id="submenu-messagerie-2" class="collapse submenu" >
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="email-compose.html">Envoyer un message</a>
+                                                    </li>
+                                                 </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- Fin messagerie -->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid">
+   
+                    <!-- Début Contenu  -->
+                    <div class="row mb-3 py-3 bg-img">
+                        <div class="col text-center p-2">
+                            <h1 class="m-2 text-light">Nom de la formation</h1>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 px-3 mt-2">
+                            <div class="mb-4">
+                                <h3>Description : </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <div class="mb-2">
+                                <div class="row">
+                                    <div class="col" id="justify-content">
+                                        <h3 class="">Volume horaire total :</h3>
+                                        <p>80 <i class="fa-solid fa-clock"></i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col text-left mt-4">
+                                    <a href="#" class="btn-rounded btn-primary p-2" data-toggle="modal" data-target="#addFormation">
+                                        Ajouter une matière <i class="fa fa-fw fa-plus text-secondary pb-1"></i>
+                                    </a>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="addFormation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter une matière</h5>
+                                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </a>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <a class="btn btn-primary py-5" href="#" data-toggle="modal" data-target="#addFormation-already">Déjà existante</a>
+                                                    </div> 
+                                                    <div class="col">
+                                                        <a class="btn btn-secondary py-5" href="#" data-toggle="modal" data-target="#addFormation-news">Une nouvelle matière</a>
+                                                     </div> 
+                                                 </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="#" class="btn btn-danger" data-dismiss="modal">Fermer</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- modal  -->
+                                <!-- ============================================================== -->
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="addFormation-already" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter une matière</h5>
+                                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </a>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="formationName" class="col-form-label">Nom de la matière :</label>
+                                                        <input id="formationName" type="text" placeholder="Saisir le nom de la matière" class="form-control form-control-sm">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="input-select-formateur">Formateur : </label>
+                                                        <select class="form-control" id="input-select-formateur">
+                                                            <option>Formateur 1</option>
+                                                            <option>Formateur 2</option>
+                                                            <option>Formateur 3</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="#" class="btn btn-secondary" data-dismiss="modal">Fermer</a>
+                                                <a href="#" class="btn btn-primary">Confirmer</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- modal  -->
+                                <!-- ============================================================== -->
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="addFormation-news" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Ajouter une matière</h5>
+                                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </a>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="input-select-matiere">Matière :</label>
+                                                        <select class="form-control" id="input-select-matiere">
+                                                            <option>Matière 1</option>
+                                                            <option>Matière 2</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="input-select-formateur">Formateur : </label>
+                                                        <select class="form-control" id="input-select-formateur">
+                                                            <option>Formateur 1</option>
+                                                            <option>Formateur 2</option>
+                                                            <option>Formateur 3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="descriptionFormation2"  class="col-form-label">Description : </label>
+                                                        <textarea class="form-control" placeholder="Saisir la description de la formation" id="descriptionFormation2" rows="3"></textarea>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a href="#" class="btn btn-secondary" data-dismiss="modal">Fermer</a>
+                                                <a href="#" class="btn btn-primary">Confirmer</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- modal  -->
+                                <!-- ============================================================== -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mt-4">
+                                <h3 class="px-1">Liste des matières :</h3>
+                                <div class="bg-light border-3 border">
+                                    <div class="card-body  row">
+                                        <div class="col-xl-8 justify-content-left">
+                                            <h3 class="text-secondary">Matière 1</h3>
+                                            <h3>Formateur:</h3>
+                                            <p>Untel Machin</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="mb-4  text-center">
+                                                <b><p>80 Heures</p></b>
+                                            </div>
+                                            <div>
+                                                <div class="text-center">
+                                                    <a href="#" class="btn-rounded btn-primary p-2" data-toggle="modal" data-target="#editFormation">
+                                                        Modifier la matière <i class="fa fa-fw fa-edit text-secondary pb-1"></i>
+                                                    </a>
+                                                </div>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="editFormation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Mdofier une Matière</h5>
+                                                                <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </a>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label for="formationName" class="col-form-label">Nom de la formation</label>
+                                                                    <input id="formationName" type="text" placeholder="Saisir le nom de la formation" class="form-control form-control-sm">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="descriptionFormation"  class="col-form-label">Description</label>
+                                                                    <textarea class="form-control" placeholder="Saisir la description de la formation" id="descriptionFormation" rows="3"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <a href="#" class="btn btn-secondary" data-dismiss="modal">Fermer</a>
+                                                                <a href="#" class="btn btn-primary">Confirmer</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ============================================================== -->
+                                                <!-- modal  -->
+                                                <!-- ============================================================== -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                    </div>
+                    <!-- Fin Contenu -->
+
+                </div>
+                <!-- Fin de content-->
+
+            </div>
+            <!-- Fin de dashboard -->
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+        
+    </div>
+        <!-- ============================================================== -->
+        <!-- end main wrapper  -->
+        <!-- ============================================================== -->
+
+
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row text-align-center">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="text-md-right footer-links d-none d-sm-block">
+                            Copyright © 2023 UA Administration
+                            <a href="#">Contacter l'administration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end footer -->
+        <!-- ============================================================== -->
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="../assets/libs/js/main-js.js"></script>
+    <!-- chart chartist js -->
+    <script src="../assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="../assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="../assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="../assets/vendor/charts/morris-bundle/morris.js"></script>
+    <!-- chart c3 js -->
+    <script src="../assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="../assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="../assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="../assets/libs/js/dashboard-ecommerce.js"></script>
+    <script src="../assets/libs/js/dashboard-influencer.js"></script>
+        <!-- javascript -->
+    <script type="text/javascript">
+        var sucessscolor = parseInt(document.getElementById('glb-success').innerHTML);
+        var success = document.getElementById('glb-success');
+
+        /* Couleur du taux de succès */
+        if (sucessscolor > 80){
+            success.classList.add("text-success");
+        }
+        else if (sucessscolor>40 && sucessscolor<70){
+            success.classList.add("text-secondary");
+        }
+        else{
+            success.classList.add("text-danger");
+        }
+        /* Fin couleur du taux de succès */
+
+        
+        /* Changement de couleurs des barres de progression */
+        var progressbar = document.getElementsByClassName("progress-bar");
+        for (var i = 0; i < progressbar.length; i++) {
+            var bar = progressbar[i];
+            var barval = parseInt(bar.innerHTML);  
+            console.log(bar.barval);
+            console.log(i);
+            if (barval>80){
+            bar.classList.add("bg-success");
+            bar.classList.remove("bg-info");
+            bar.classList.remove("bg-warnning")
+            bar.classList.remove("bg-danger");
+            }
+            else if (barval>50 && barval<80){
+            bar.classList.add("bg-info");
+            }
+            else if (barval>30 && barval<50){
+            bar.classList.add("bg-warning");
+            }
+            else if (barval<30){
+            bar.classList.add("bg-danger");
+            }
+        }
+        /* Fin changement de couleurs des barres de progression */
+
+    </script>
+</body>
+ 
+</html>
